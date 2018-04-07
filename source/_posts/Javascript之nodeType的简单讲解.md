@@ -1,7 +1,7 @@
 ---
 title: Javascript之nodeType的简单讲解
 date: 2018-04-05 21:25:29
-tags:  Javascript
+tags:  DOM
 ---
 
 # Node类型
@@ -76,4 +76,4 @@ DocumentFragment是所有节点中唯一一个没有对应标记的类型，它�
 （3）nodeValue为null
 （4）parentNode为null
 
-我们简单地介绍了几种常见的Node类型，要记住，HTML中的节点并不只是包括元素节点，它还包括文本节点，注释节点等等。在这里我们只是简单地说明了几种常见的节点，想要进一步学习的同学可以查找一下相关资料。
+HTML中的节点并不只是包括元素节点，它还包括文本节点，注释节点等等，大家可自行探索。
