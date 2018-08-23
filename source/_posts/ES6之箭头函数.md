@@ -1,12 +1,10 @@
 ---
-title: ES6之箭头函数
+title: ES6之函数
 date: 2018-08-20 22:21:47
 tags: Javascript
 ---
 
-> 尽管ES9已经发布了...但是！并不妨碍我们箭头函数的当家地位！
-
-> 本文标题虽然写的是箭头函数，但是这篇文章更多会是对ES6函数部分的一些特性做一个学习总结。
+> 尽管ES9已经发布了...
 
 # 函数默认值
 
@@ -77,4 +75,64 @@ f() // 1
 ```
 上面代码中，函数f调用时，参数y = x形成一个单独的作用域。这个作用域里面，变量x本身没有定义，所以指向外层的全局变量x。函数调用时，函数体内部的局部变量x影响不到默认值变量x。
 
-如果此时，全局变量x不存在，就会报错。
+如果此时，全局变量x不存在，就会报错
+
+# rest参数
+
+ES6 引入 rest 参数（形式为...变量名），用于获取函数的多余参数，这样就不需要使用arguments对象了。rest 参数搭配的变量是一个数组，该变量将多余的参数放入数组中。rest本身就是数组，可以使用数组的方法。
+
+```
+function add(...values) {
+  let sum = 0;
+
+  for (var val of values) {
+    sum += val;
+  }
+
+  return sum;
+}
+
+add(2, 5, 3) // 10
+```
+注意，rest 参数之后不能再有其他参数（即只能是最后一个参数），否则会报错。
+
+# name属性
+
+函数的name属性，返回该函数的函数名。
+```
+function foo() {}
+foo.name // "foo"
+```
+如果将一个匿名函数赋值给一个变量，ES5 的name属性，会返回空字符串，而 ES6 的name属性会返回实际的函数名。
+```
+var f = function () {};
+
+// ES5
+f.name // ""
+
+// ES6
+f.name // "f"
+```
+如果将一个具名函数赋值给一个变量，则 ES5 和 ES6 的name属性都返回这个具名函数原本的名字。
+```
+const bar = function baz() {};
+
+// ES5
+bar.name // "baz"
+
+// ES6
+bar.name // "baz"
+```
+Function构造函数返回的函数实例，name属性的值为anonymous。
+```
+(new Function).name // "anonymous"
+```
+bind返回的函数，name属性值会加上bound前缀。
+```
+function foo() {};
+foo.bind({}).name // "bound foo"
+
+(function(){}).bind({}).name // "bound "
+```
+
+# 箭头函数
