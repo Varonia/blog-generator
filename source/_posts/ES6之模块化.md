@@ -13,8 +13,9 @@ ES6中使用了新语法，支持模块化原生使用：
   hello();
 </script>
 ```
-```
+```js
 //module1.js
+
 export function hello(){
 	console.log("hello world!")
 }
