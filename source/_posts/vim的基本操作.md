@@ -1,7 +1,7 @@
 ---
 title: vim的基本操作
 date: 2018-08-19 14:37:41
-tags:
+tags: vim
 ---
 >本文环境以windows为主，在学习使用vim之前，请安装git bash。大家也可以参阅官方文档进行学习，在命令行（bash）中直接输入：`vimtutor`
 

@@ -1,8 +1,9 @@
 ---
 title: Array的几个实用方法
 date: 2018-04-16 16:12:23
-tags: 
+tags: JavaScript
 ---
+
 # 别致的Array方法小技巧
 
 - concat方法：如果数组成员包括对象，concat方法返回当前数组的一个浅拷贝

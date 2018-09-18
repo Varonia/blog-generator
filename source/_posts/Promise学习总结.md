@@ -1,7 +1,7 @@
 ---
 title: Promise学习总结
 date: 2018-08-19 15:10:49
-tags: Javascript
+tags: JavaScript
 ---
 
 - [仓库地址](https://github.com/Varonia/promise-demo)

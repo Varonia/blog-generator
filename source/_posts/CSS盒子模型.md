@@ -1,7 +1,7 @@
 ---
 title: CSS盒子模型
 date: 2018-03-19 20:32:29
-tags: css
+tags: CSS
 ---
 
 css盒子模型分为标准盒子模型和ie盒子模型，分别对应

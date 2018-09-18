@@ -1,7 +1,7 @@
 ---
 title: ES6之函数
 date: 2018-08-20 22:21:47
-tags: Javascript
+tags: JavaScript
 ---
 
 > 尽管ES9已经发布了...
